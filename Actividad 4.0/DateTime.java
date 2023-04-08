@@ -171,12 +171,27 @@ public class DateTime extends DateD
     }
 
     //████████████████████████████████████████████████████████
+    /*
     public DateTime clone(DateTime obj1)
     {
         DateTime cloned = new DateTime(this.HOURS, this.MINUTES, this.SECONDS, this.DAY, this.MONTH, this.YEAR);
         cloned.setFORMAT(this.getFORMAT());
         return cloned;
 
+    }
+     */
+
+    public DateTime clone(DateTime obj1)
+    {
+        DateTime cloned = new DateTime();
+        cloned.set_day(obj1.get_day());
+        cloned.set_month(obj1.get_month());
+        cloned.set_year(obj1.get_year());
+        cloned.setFormat(obj1.get_format());
+        cloned.setSeconds(obj1.getSeconds());
+        cloned.setMinutes(obj1.getMinutes());
+        cloned.setHours(obj1.getHours());
+        return cloned;
     }
 
     //████████████████████████████████████████████████████████
