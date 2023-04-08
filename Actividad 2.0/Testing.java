@@ -1,4 +1,4 @@
-class testing {
+class Testing {
     public static void main(String[] args) {
         //JOptionPane.showInternalMessageDialog(null, "hola", "title", JOptionPane.INFORMATION_MESSAGE);
         date d1 = new date(29,2,2000);
