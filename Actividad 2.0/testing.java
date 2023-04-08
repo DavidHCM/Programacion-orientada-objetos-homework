@@ -1,6 +1,4 @@
-import javax.swing.JOptionPane;
-
-class Main {
+class testing {
     public static void main(String[] args) {
         //JOptionPane.showInternalMessageDialog(null, "hola", "title", JOptionPane.INFORMATION_MESSAGE);
         date d1 = new date(29,2,2000);
