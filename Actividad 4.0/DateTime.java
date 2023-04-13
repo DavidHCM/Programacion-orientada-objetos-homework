@@ -16,15 +16,15 @@ public class DateTime extends DateD
     {
 
         super(DAY,MONTH,YEAR);
-        if(HOURS >= 1 && HOURS <= 23)
+        if(HOURS >= 0 && HOURS <= 23)
         {
             this.HOURS = HOURS;
         }
-        if(MINUTES >= 1 && MINUTES <= 59)
+        if(MINUTES >= 0 && MINUTES <= 59)
         {
             this.MINUTES = MINUTES;
         }
-        if(SECONDS >= 1 && SECONDS <= 59)
+        if(SECONDS >= 0 && SECONDS <= 59)
         {
             this.SECONDS = SECONDS;
         }
@@ -198,7 +198,7 @@ public class DateTime extends DateD
                 this.HOURS += 1;
                 if(HOURS > 23)
                 {
-                    this.HOURS = 1;
+                    this.HOURS = 0;
                     super.next();
                 }
             }
@@ -219,7 +219,8 @@ public class DateTime extends DateD
         {
             if(HOURS < 12)
             {
-                return "[" + this.HOURS + ":" + this.MINUTES + ":" + this.SECONDS + " AM] "  + this.DAY + "-" + this.mName + "-" + this.YEAR;
+                //return "[" + this.HOURS + ":" + this.MINUTES + ":" + this.SECONDS + " AM] "  + this.DAY + "-" + this.mName + "-" + this.YEAR;
+                return "[" + this.HOURS + ":" + this.MINUTES + ":" + this.SECONDS + " AM] "  + super.toString();
             }
             else
             {
@@ -230,7 +231,8 @@ public class DateTime extends DateD
         {
             if(HOURS < 12)
             {
-                return "[" + this.HOURS + ":" + this.MINUTES + ":" + this.SECONDS + " AM] "  + this.DAY + " de " + this.mName + " de " + this.YEAR;
+                //return "[" + this.HOURS + ":" + this.MINUTES + ":" + this.SECONDS + " AM] "  + this.DAY + " de " + this.mName + " de " + this.YEAR;
+                return "[" + this.HOURS + ":" + this.MINUTES + ":" + this.SECONDS + " AM] "  + super.toString();
             }
             else
             {
